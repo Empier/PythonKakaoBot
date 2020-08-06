@@ -253,7 +253,6 @@ class Session(object):
 
         if nickname == "":
             member = self.send_member_info(chat_id, member_id)
-            member = LocoMemberResponse(member)
 
             if member.status() != 0 or len(member.members()) == 0:
                 raise ValueError("Non existent member_id!")
